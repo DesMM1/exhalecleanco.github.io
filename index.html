@@ -23,7 +23,7 @@
   --white:#FFFFFF;
   --grey:#999999;
 }
-html{scroll-behavior:smooth;overflow-x:hidden;max-width:100%}
+html{scroll-behavior:smooth;overflow-x:clip}
 body{font-family:'Montserrat',sans-serif;background:var(--black);color:var(--white);overflow-x:hidden}
 
 /* NAV */
@@ -50,7 +50,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .btn-primary:hover{background:var(--gold-light);transform:translateY(-2px)}
 .btn-secondary{background:transparent;color:var(--white);padding:16px 40px;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;border:1px solid rgba(255,255,255,0.3);text-decoration:none;transition:all 0.3s;display:inline-block}
 .btn-secondary:hover{border-color:var(--gold);color:var(--gold)}
-.hero-scroll{position:absolute;bottom:40px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fadeUp 0.8s ease forwards 1.2s}
+.hero-scroll{position:absolute;bottom:32px;left:0;right:0;margin:0 auto;width:60px;display:flex;flex-direction:column;align-items:center;gap:8px;opacity:0;animation:fadeUp 0.8s ease forwards 1.2s;pointer-events:none;z-index:3}
 .hero-scroll span{font-size:9px;letter-spacing:4px;color:rgba(255,255,255,0.4);text-transform:uppercase}
 .scroll-line{width:1px;height:40px;background:linear-gradient(to bottom,var(--gold),transparent);animation:scrollPulse 2s ease infinite}
 
@@ -107,7 +107,7 @@ section{padding:120px 60px}
 .contact-label{font-size:10px;font-weight:700;letter-spacing:3px;color:var(--gold);text-transform:uppercase;min-width:60px}
 .contact-value{font-size:14px;color:rgba(255,255,255,0.7)}
 .map-container{margin-top:40px;border:1px solid rgba(201,168,76,0.2);overflow:hidden}
-.map-container iframe{width:100%;height:240px;border:none;filter:none}
+.map-container iframe{width:100%;height:240px;border:none;}
 .quote-form{display:flex;flex-direction:column;gap:16px}
 .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .form-group{display:flex;flex-direction:column;gap:8px}
@@ -151,7 +151,6 @@ footer{border-top:1px solid rgba(201,168,76,0.15);padding:48px 60px;background:#
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 @keyframes scrollPulse{0%,100%{opacity:1;transform:scaleY(1)}50%{opacity:0.4;transform:scaleY(0.6)}}
 
-@media(min-width:769px){.hero-scroll{bottom:-32px}}
 /* RESPONSIVE */
 @media(max-width:768px){
   nav{padding:16px 24px}
