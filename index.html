@@ -68,7 +68,7 @@ section{padding:120px 60px}
 .service-detail-tag{font-size:10px;font-weight:700;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:12px}
 .service-detail-name{font-size:26px;font-weight:800;margin-bottom:8px}
 .service-detail-best{font-size:13px;font-weight:300;color:rgba(255,255,255,0.45);font-style:italic;margin-bottom:32px}
-.service-detail-includes{display:flex;flex-direction:column;gap:10px;margin-bottom:24px}
+.service-detail-includes{display:grid;grid-template-columns:1fr 1fr;gap:12px 40px;margin-bottom:24px}.service-detail-includes .service-detail-item:last-child:nth-child(odd){grid-column:1 / -1}
 .service-detail-item{display:flex;gap:12px;align-items:flex-start}
 .service-detail-diamond{width:6px;height:6px;background:var(--gold);transform:rotate(45deg);flex-shrink:0;margin-top:6px}
 .service-detail-item span{font-size:13px;font-weight:300;line-height:1.6;color:rgba(255,255,255,0.7)}
