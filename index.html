@@ -152,6 +152,25 @@ section#gallery div[style*="aspect-ratio"]:hover img{transform:scale(1.05)}
 /* ANIMATIONS */
 @keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
 @keyframes scrollPulse{0%,100%{opacity:1;transform:scaleY(1)}50%{opacity:0.4;transform:scaleY(0.6)}}
+.service-details{background:#000;padding:120px 60px}
+.service-details-header{text-align:center;margin-bottom:80px}
+.service-detail-block{max-width:1000px;margin:0 auto 48px;border:1px solid rgba(201,168,76,0.12);background:#0A0A0A;position:relative;overflow:hidden}
+.service-detail-block::before{content:'';position:absolute;top:0;left:0;width:3px;height:100%;background:var(--gold)}
+.service-detail-inner{padding:48px 56px}
+.service-detail-tag{font-size:10px;font-weight:700;letter-spacing:5px;color:var(--gold);text-transform:uppercase;margin-bottom:12px}
+.service-detail-name{font-size:26px;font-weight:800;margin-bottom:8px}
+.service-detail-best{font-size:13px;font-weight:300;color:rgba(255,255,255,0.45);font-style:italic;margin-bottom:32px}
+.service-detail-includes{display:grid;grid-template-columns:1fr 1fr;gap:12px 40px;margin-bottom:24px}
+.service-detail-item{display:flex;gap:12px;align-items:flex-start}
+.service-detail-diamond{width:6px;height:6px;background:var(--gold);transform:rotate(45deg);flex-shrink:0;margin-top:6px}
+.service-detail-item span{font-size:13px;font-weight:300;line-height:1.6;color:rgba(255,255,255,0.7)}
+.service-detail-note{font-size:12px;font-weight:500;color:rgba(201,168,76,0.7);border-top:1px solid rgba(201,168,76,0.12);padding-top:20px;margin-top:8px;font-style:italic}
+.service-detail-not{font-size:12px;color:rgba(255,255,255,0.3);margin-top:8px}
+.addons-block{max-width:1000px;margin:0 auto;border:1px solid rgba(201,168,76,0.2);background:#0A0A0A;padding:48px 56px}
+.addons-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:32px}
+.addon-item{display:flex;justify-content:space-between;align-items:center;padding:14px 20px;border:1px solid rgba(255,255,255,0.06);background:#111}
+.addon-name{font-size:13px;font-weight:500;color:rgba(255,255,255,0.7)}
+.addon-price{font-size:13px;font-weight:700;color:var(--gold)}
 
 /* RESPONSIVE */
 @media(max-width:768px){nav{display:flex;justify-content:space-between}.nav-cta{padding:8px 12px;font-size:10px;letter-spacing:1px}
@@ -236,7 +255,114 @@ section#gallery div[style*="grid-template-columns"]{grid-template-columns:1fr!im
     </div>
   </div>
 </section>
-
+<section class="service-details" id="service-details">
+  <div class="service-details-header">
+    <p class="section-eyebrow">What's Included</p>
+    <h2 class="section-title">Every Service.<br>Every Detail.</h2>
+  </div>
+  <div class="service-detail-block">
+    <div class="service-detail-inner">
+      <p class="service-detail-tag">01 — Standard Clean</p>
+      <h3 class="service-detail-name">Standard Residential Clean</h3>
+      <p class="service-detail-best">Best for: Regular home maintenance, recurring clients, homes that are already generally tidy.</p>
+      <div class="service-detail-includes">
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Kitchen — countertops, stovetop, appliance exteriors, microwave interior, sink, cabinet wipe-down, sweep & mop</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Living room — dusting, baseboards, mirrors, vacuum or mop, light switches & handles</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>All bedrooms — dusting, baseboards, mirrors, vacuum or mop, windowsills</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>All bathrooms — toilet, sink, shower/tub, mirror, floors, baseboards</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Trash emptied and relined in all rooms</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Final walkthrough and before/after photos</span></div>
+      </div>
+      <p class="service-detail-not">Not included: inside oven, inside fridge, interior windows, laundry, garage — available as add-ons.</p>
+    </div>
+  </div>
+  <div class="service-detail-block">
+    <div class="service-detail-inner">
+      <p class="service-detail-tag">02 — Deep Clean</p>
+      <h3 class="service-detail-name">Deep Clean</h3>
+      <p class="service-detail-best">Best for: First-time clients, homes that haven't been cleaned in a while, seasonal cleans, move-in prep.</p>
+      <div class="service-detail-includes">
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Everything in the Standard Clean</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Inside oven cleaning</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Inside fridge cleaning</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Cabinet interiors wiped</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Window tracks cleaned</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Door frames and doors wiped throughout</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Baseboards wiped in full detail</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Grout lines scrubbed in shower and bathroom</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Behind and under accessible furniture</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Spot cleaning of walls for marks and fingerprints</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Vents and air registers dusted</span></div>
+      </div>
+      <p class="service-detail-not">Not included: interior windows, laundry, garage — available as add-ons.</p>
+    </div>
+  </div>
+  <div class="service-detail-block">
+    <div class="service-detail-inner">
+      <p class="service-detail-tag">03 — Pre-Listing Clean</p>
+      <h3 class="service-detail-name">Pre-Listing Clean</h3>
+      <p class="service-detail-best">Best for: Realtors and homeowners preparing a property for listing photos or showings.</p>
+      <div class="service-detail-includes">
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Full deep clean of the entire property</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Extra attention to high-visibility areas — kitchen, bathrooms, living spaces</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>All mirrors and glass polished streak-free</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>All floors spotless — no hair, dust, or residue</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Entryway and front door area cleaned</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Any staging surfaces wiped and presentable</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Before and after photos sent immediately upon completion</span></div>
+      </div>
+      <p class="service-detail-note">Every property is treated as if listing photos are happening same day. Priced at deep clean rate + premium.</p>
+    </div>
+  </div>
+  <div class="service-detail-block">
+    <div class="service-detail-inner">
+      <p class="service-detail-tag">04 — Move In / Move Out</p>
+      <h3 class="service-detail-name">Move In / Move Out Clean</h3>
+      <p class="service-detail-best">Best for: Tenants moving out, landlords preparing for new tenants, new homeowners before move-in.</p>
+      <div class="service-detail-includes">
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Full deep clean of entire property — every room</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Inside oven and fridge</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>All cabinet interiors</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>All closet interiors</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Window tracks</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Bathroom grout and fixtures deep scrubbed</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>All baseboards and door frames</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Garage sweep if applicable and agreed upon</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Property left move-in ready — like no one ever lived there</span></div>
+      </div>
+      <p class="service-detail-note">Our most thorough service. Priced accordingly based on property size.</p>
+    </div>
+  </div>
+  <div class="service-detail-block">
+    <div class="service-detail-inner">
+      <p class="service-detail-tag">05 — Property Turnover</p>
+      <h3 class="service-detail-name">Property Turnover Clean</h3>
+      <p class="service-detail-best">Best for: Property managers and landlords between tenant changes. Fast, thorough, reliable.</p>
+      <div class="service-detail-includes">
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Full standard clean of entire unit</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Appliance exteriors and microwave interior</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Bathroom deep scrub</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>All floors vacuumed or mopped</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Trash removed from all rooms</span></div>
+        <div class="service-detail-item"><div class="service-detail-diamond"></div><span>Unit left clean and ready for next tenant</span></div>
+      </div>
+      <p class="service-detail-note">Priced as flat rate per unit. Volume discounts available for property managers with multiple units.</p>
+    </div>
+  </div>
+  <div class="addons-block">
+    <p class="section-eyebrow">Enhance Any Service</p>
+    <h3 class="section-title" style="font-size:28px;margin-bottom:8px">Add-On Services</h3>
+    <p style="font-size:13px;color:rgba(255,255,255,0.45);font-style:italic">Must be requested at time of booking — not available as last-minute additions on the day of service.</p>
+    <div class="addons-grid">
+      <div class="addon-item"><span class="addon-name">Inside Oven Clean</span><span class="addon-price">$30</span></div>
+      <div class="addon-item"><span class="addon-name">Inside Fridge Clean</span><span class="addon-price">$25</span></div>
+      <div class="addon-item"><span class="addon-name">Interior Windows</span><span class="addon-price">$30</span></div>
+      <div class="addon-item"><span class="addon-name">Laundry Wash & Fold</span><span class="addon-price">$25</span></div>
+      <div class="addon-item"><span class="addon-name">Garage Sweep</span><span class="addon-price">$50</span></div>
+      <div class="addon-item"><span class="addon-name">Balcony / Patio</span><span class="addon-price">$30</span></div>
+    </div>
+  </div>
+</section>
 <section id="why-us">
   <div class="why-us-inner">
     <div class="why-us-left reveal-left">
